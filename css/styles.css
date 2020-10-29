@@ -242,3 +242,53 @@ main .testimonials .review:nth-child(3) {
     margin: 0;
   }
 }
+
+/* background-pattern */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("../assets/images/bg-pattern-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 42%;
+  height: 33.6rem;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  right: 0;
+  background-image: url("../assets/images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 100%;
+  width: 77%;
+  z-index: -1;
+}
+
+@media (max-height: 700px) {
+  body::after {
+    bottom: auto;
+    top: 10rem;
+    height: 67rem;
+  }
+}
+
+@media (max-width: 991px) {
+  body::before {
+    background-image: url("../assets/images/bg-pattern-top-mobile.svg");
+    width: 100%;
+  }
+  body::after {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    bottom: 0;
+    background-image: url("../assets/images/bg-pattern-bottom-mobile.svg");
+  }
+}
