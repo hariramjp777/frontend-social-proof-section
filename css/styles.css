@@ -1,3 +1,4 @@
+/* css custom variables for colors */
 :root {
   --dark-magenta: hsl(300, 43%, 22%);
   --pink: hsl(333, 80%, 67%);
@@ -7,6 +8,7 @@
   --link: #007bff;
 }
 
+/* css resets */
 * {
   margin: 0;
   padding: 0;
@@ -23,11 +25,13 @@ html {
   font-size: 62.5%;
 }
 
+/* set font-family and bg-color for body */
 body {
   background-color: var(--white);
   font-family: "Spartan", sans-serif;
 }
 
+/* remove list-styles for lists and user-selection for image */
 ul {
   list-style: none;
 }
@@ -36,6 +40,7 @@ img {
   user-select: none;
 }
 
+/* main element - absolute, centered in page */
 main {
   position: absolute;
   width: 82%;
@@ -44,15 +49,23 @@ main {
   transform: translate(-50%, -50%);
 }
 
+/* two children - hero and testimonials */
+/* hero is flex with space-between justification */
 main .hero {
   display: flex;
   justify-content: space-between;
 }
 
+/* intro and rating -> 40% and 60% */
 main .hero .intro {
   width: 40%;
 }
 
+main .hero .rating {
+  width: 50%;
+}
+
+/* style h1 and p */
 main .hero .intro h1 {
   font-size: 4vw;
   font-weight: 700;
@@ -68,10 +81,7 @@ main .hero .intro p {
   line-height: 1.8;
 }
 
-main .hero .rating {
-  width: 50%;
-}
-
+/* rating list-container is flex and direction is column */
 main .hero .rating ul {
   display: flex;
   flex-direction: column;
@@ -105,6 +115,7 @@ main .hero .rating ul li:nth-child(3) {
   margin-left: auto;
 }
 
+/* testimonials  */
 main .testimonials {
   padding: 4rem 0;
   height: 50%;
@@ -120,6 +131,7 @@ main .testimonials .review {
   padding-bottom: 0;
 }
 
+/* profile section is grid */
 main .testimonials .review .profile {
   display: grid;
   width: 200px;
@@ -148,6 +160,7 @@ main .testimonials .review .profile p {
   margin-top: 0.2rem;
 }
 
+/* blockquote */
 main .testimonials .review blockquote {
   margin: 3rem 0;
   color: var(--light-grayish-magenta);
@@ -163,6 +176,7 @@ main .testimonials .review:nth-child(3) {
   transform: translateY(4rem);
 }
 
+/* media queries */
 @media (max-height: 700px) {
   main {
     position: static;
@@ -216,6 +230,7 @@ main .testimonials .review:nth-child(3) {
   }
 }
 
+/* media queries for profile section */
 @media (max-width: 260px) {
   main .testimonials .review .profile {
     width: 100%;
