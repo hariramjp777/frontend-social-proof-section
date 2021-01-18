@@ -213,7 +213,7 @@ main .testimonials .review:nth-child(3) {
   }
   .attribution {
     position: static;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -262,7 +262,7 @@ main .testimonials .review:nth-child(3) {
   }
   .attribution {
     position: static;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
